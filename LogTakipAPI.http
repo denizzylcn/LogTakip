@@ -1,0 +1,6 @@
+@LogTakipAPI_HostAddress = http://localhost:5009
+
+GET {{LogTakipAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
