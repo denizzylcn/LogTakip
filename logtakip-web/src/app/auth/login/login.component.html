@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2>Giriş Yap</h2>
+    
+    <div>
+      <label for="email">E-posta</label>
+      <input id="email" type="email" formControlName="email">
+    </div>
+
+    <div>
+      <label for="passwordHash">Şifre</label>
+      <input id="passwordHash" type="password" formControlName="passwordHash">
+    </div>
+
+    <button type="submit">Giriş Yap</button>
+
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </form>
+</div>
